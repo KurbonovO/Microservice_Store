@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo-eureka/demo-eureka.iml" filepath="$PROJECT_DIR$/demo-eureka/demo-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-gateway/demo-gateway.iml" filepath="$PROJECT_DIR$/demo-gateway/demo-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-inventory1/demo-inventory.iml" filepath="$PROJECT_DIR$/demo-inventory1/demo-inventory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-order1/demo-orders.iml" filepath="$PROJECT_DIR$/demo-order1/demo-orders.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-store/demo-store.iml" filepath="$PROJECT_DIR$/demo-store/demo-store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/otash.iml" filepath="$PROJECT_DIR$/.idea/otash.iml" />
+    </modules>
+  </component>
+</project>

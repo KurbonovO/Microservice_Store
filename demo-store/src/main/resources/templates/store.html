@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>STORE</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<div><a href="/inventory/main">INVENTORY</a>&nbsp;<a href="/orders/main">ORDERS</a>&nbsp;<a href="/store/cart">CART</a></div>
+
+<div th:switch="${items}">
+  <h2 th:case="null">Inventory is empty!</h2>
+  <div th:case="*">
+    <h2>Inventory</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="item : ${items}">
+        <td th:text="${item.id}"></td>
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.price}"></td>
+        <td th:text="${item.qty}"></td>
+        <td><a th:href="@{/store/cart/add/{id}(id=${item.id})}">Add to cart</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><a href="/store/cart/checkout">Checkout</a></p>
+</div>
+
+</body>
+</html>

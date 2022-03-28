@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>INVENTORY</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<div><a href="/store/main">STORE</a>&nbsp;<a href="/orders/main">ORDERS</a>&nbsp;<a href="/store/cart">CART</a></div>
+
+<div th:switch="${items}">
+    <h2 th:case="null">Inventory is empty!</h2>
+    <div th:case="*">
+        <h2>Inventory</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="item : ${items}">
+                <td th:text="${item.id}"></td>
+                <td th:text="${item.name}"></td>
+                <td th:text="${item.price}"></td>
+                <td th:text="${item.qty}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/inventory/create">Add a new item</a></p>
+</div>
+
+</body>
+</html>
